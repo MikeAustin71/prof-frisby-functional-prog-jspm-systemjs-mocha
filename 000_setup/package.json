@@ -1,0 +1,20 @@
+{
+  "name": "009_MountingBasics",
+  "version": "1.0.0",
+  "description": "React Mounting Basics",
+  "main": "main.js",
+  "scripts": {
+    "build": "babel src --out-dir build --source-maps true"
+  },
+  "keywords": [
+    "javascript",
+    "eggheadio",
+    "ProfFrisby"
+  ],
+  "author": "Mike Rapp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "file:///G:/Git/Javascript/ProfFrisby/FunctionalProgramming"
+  }
+}
