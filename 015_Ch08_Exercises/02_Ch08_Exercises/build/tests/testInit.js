@@ -9,7 +9,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 // This defines the list of test files we want to load and run tests against.
 //
-var mochaTestScripts = ['./build/tests/Ex01_tests.js', './build/tests/Ex02_tests.js', './build/tests/Ex03_tests.js', './build/tests/Ex04_tests.js', './build/tests/Ex05_tests.js', './build/tests/Ex06_tests.js', './build/tests/Ex07_tests.js'];
+var mochaTestScripts = ['./build/tests/Ex01_tests.js', './build/tests/Ex02_tests.js', './build/tests/Ex03_tests.js', './build/tests/Ex04_tests.js', './build/tests/Ex05_tests.js', './build/tests/Ex06_tests.js', './build/tests/Ex07_tests.js', './build/tests/Ex08_tests.js'];
 
 //
 // If you have a global or two that get exposed from your

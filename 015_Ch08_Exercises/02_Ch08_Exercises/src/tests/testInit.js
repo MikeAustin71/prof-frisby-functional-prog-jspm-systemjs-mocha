@@ -20,7 +20,8 @@ var mochaTestScripts = [
     './build/tests/Ex04_tests.js',
     './build/tests/Ex05_tests.js',
     './build/tests/Ex06_tests.js',
-    './build/tests/Ex07_tests.js'
+    './build/tests/Ex07_tests.js',
+    './build/tests/Ex08_tests.js'
 
 
 ];

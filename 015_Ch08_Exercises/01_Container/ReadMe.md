@@ -21,7 +21,7 @@ This setup is designed to test 'The Mighty Container'.
 * babel-cli version 6.3.17  (globally installed) 
 * babel-core version 6.3.17 (globally installed by babel-cli)
 * babel-runtime version 6.3.13 (globally installed manually)
-* jspm version 0.16.15
+* jspm version 0.16.18
 * accounting version 0.4.1
 * ramda version 0.18.0
 * mocha version 2.3.4
@@ -91,6 +91,7 @@ This setup is designed to test 'The Mighty Container'.
     * (11) Run:  jspm install css=github:systemjs/plugin-css
     * (12) Run:  jspm install npm:accounting
     * (13) Run:  jspm install npm:ramda
+    * (14) Run:  jspm install npm:folktale
     * (14) Run:  jspm install npm:mocha (In addition, it may be necessary to install mocha globally npm install -g mocha)
     * (15) Run:  jspm install npm:chai
     * (16) Run:  jspm install jquery
@@ -149,7 +150,8 @@ Choose a server.
  * (1) make sure jspm-server is installed globally: __jspm install -g jspm-server__
  * (2) For hot-reload feature make sure source javascript files include ```export let __hotReload = true;```
  * (3) Hot-Reload Feature = __The jspm-server automatically refreshes to display changes.__
- * (4) To display index.html in the Browser-> Run: __jspm-server__<ENTER>
+ * (4) __NOTE: Hot Reload is not working with this version. You will need to reload page for display of changes.__
+ * (5) To display index.html in the Browser-> Run: __jspm-server__<ENTER>
 
 #### 8-b http-server - an alternative
  * To display index.html in the Browser npm install -g http-server

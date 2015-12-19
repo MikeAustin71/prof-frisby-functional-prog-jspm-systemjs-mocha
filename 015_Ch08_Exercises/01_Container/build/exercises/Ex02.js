@@ -1,6 +1,6 @@
 'use strict';
 
-require('pagestyles/idxdisplay.css!');
+require('./../../build/styles/css/idxdisplay.css!');
 
 var _ramda = require('ramda');
 

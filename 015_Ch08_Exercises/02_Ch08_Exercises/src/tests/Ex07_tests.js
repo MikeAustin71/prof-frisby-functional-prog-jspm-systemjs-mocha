@@ -1,9 +1,6 @@
 /**
  * Created by mike10 on 12/17/2015.
  */
-/**
- * Created by mike10 on 12/17/2015.
- */
 
 export let __hotReload = true;
 

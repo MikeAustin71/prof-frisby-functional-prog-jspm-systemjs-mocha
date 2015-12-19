@@ -13,12 +13,11 @@ System.config({
   },
   paths: {
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*",
-    "pstyle:*":"./build/styles/*"  
+    "npm:*": "jspm_packages/npm/*"
   },
   trace: "true",
+
   map: {
-    "pagestyles": "pstyle:css",  
     "accounting": "npm:accounting@0.4.1",
     "babel": "npm:babel-core@6.3.17",
     "babel-core": "npm:babel-core@6.3.17",

@@ -16,9 +16,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 /**
  * Created by mike10 on 12/17/2015.
  */
-/**
- * Created by mike10 on 12/17/2015.
- */
 
 var __hotReload = exports.__hotReload = true;
 

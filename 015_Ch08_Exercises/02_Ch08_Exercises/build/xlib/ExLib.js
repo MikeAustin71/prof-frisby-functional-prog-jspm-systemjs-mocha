@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.validateLen3 = exports.checkActiveShowWelcome = exports.Right = exports.Left = exports.getPostToUpper = exports.intParse = exports.findFirstInitial = exports.safeProp = exports.firstInList = exports.Identity = exports.add1 = exports.__hotReload = undefined;
+exports.saveUser = exports.save = exports.either = exports.unsafePerformIO = exports.IO = exports.validateLen3 = exports.checkActiveShowWelcome = exports.Right = exports.Left = exports.getPostToUpper = exports.intParse = exports.findFirstInitial = exports.safeProp = exports.firstInList = exports.Identity = exports.add1 = exports.__hotReload = undefined;
 
 var _ramda = require('ramda');
 
@@ -179,4 +179,72 @@ var checkActiveShowWelcome = exports.checkActiveShowWelcome = _ramda2.default.co
 var validateLen3 = exports.validateLen3 = function validateLen3(x) {
     return x.length > 3 ? Right.of(x) : Left.of("You need > 3");
 };
+
+// Exercise 8
+// ==========
+// Use ex7 above and Either as a functor to save the user if they are valid or
+// return the error message string. Remember either's two arguments must return
+// the same type.
+
+//var save = function(x){
+//    return new IO(function(){
+//        console.log("SAVED USER!");
+//        return x + '-saved';
+//    });
+//};
+
+// IO
+var IO = exports.IO = function IO(f) {
+    this.unsafePerformIO = f;
+};
+
+IO.of = function (x) {
+    return new IO(function () {
+        return x;
+    });
+};
+
+IO.prototype.map = function (f) {
+    return new IO(_ramda2.default.compose(f, this.unsafePerformIO));
+};
+
+IO.prototype.join = function () {
+    return this.unsafePerformIO();
+};
+
+IO.prototype.chain = function (f) {
+    return this.map(f).join();
+};
+
+IO.prototype.ap = function (a) {
+    return this.chain(function (f) {
+        return a.map(f);
+    });
+};
+
+IO.prototype.inspect = function () {
+    return 'IO(' + inspect(this.unsafePerformIO) + ')';
+};
+
+var unsafePerformIO = exports.unsafePerformIO = function unsafePerformIO(x) {
+    return x.unsafePerformIO();
+};
+
+var either = exports.either = _ramda2.default.curry(function (f, g, e) {
+    switch (e.constructor) {
+        case Left:
+            return f(e.__value);
+        case Right:
+            return g(e.__value);
+    }
+});
+
+var save = exports.save = function save(x) {
+    return new IO(function () {
+        console.log("SAVED USER!");
+        return x + '-saved';
+    });
+};
+
+var saveUser = exports.saveUser = _ramda2.default.compose(either(IO.of, save), validateLen3);
 //# sourceMappingURL=ExLib.js.map

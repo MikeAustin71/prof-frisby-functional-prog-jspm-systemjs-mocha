@@ -2,7 +2,7 @@
  * Created by mike10 on 12/13/2015.
  */
 
-import "pagestyles/idxdisplay.css!";
+import "./../../build/styles/css/idxdisplay.css!";
 
 import _ from 'ramda';
 

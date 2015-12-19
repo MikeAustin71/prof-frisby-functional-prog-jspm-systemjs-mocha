@@ -5,8 +5,8 @@
 This is the setup used to build and run tests for Professor Frisby's Functional programming examples.
 The tests are executed in the browser using index.html.
 
-## Chapter 8 - Container
-This setup is designed to test 'The Mighty Container'. 
+## Chapter 8 - Exercises
+This setup is designed to run tests covering the Exercises for Chapter 8.
 
 ## Thanks to Dr. Boolean for:
 [Professor Frisby's Mostly Adequate Guide To Functional Programming ](https://drboolean.gitbooks.io/mostly-adequate-guide/?__s=ehycp62un87de5g78chs)
@@ -150,7 +150,8 @@ Choose a server.
  * (1) make sure jspm-server is installed globally: __jspm install -g jspm-server__
  * (2) For hot-reload feature make sure source javascript files include ```export let __hotReload = true;```
  * (3) Hot-Reload Feature = __The jspm-server automatically refreshes to display changes.__
- * (4) To display index.html in the Browser-> Run: __jspm-server__<ENTER>
+ * (4) __NOTE: Hot Reload is not working with this version. You will need to reload page for display of changes.__
+ * (5) To display index.html in the Browser-> Run: __jspm-server__<ENTER>
 
 #### 8-b http-server - an alternative
  * To display index.html in the Browser npm install -g http-server
