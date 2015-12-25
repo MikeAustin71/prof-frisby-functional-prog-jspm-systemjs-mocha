@@ -122,7 +122,8 @@ var ex4_1 = exports.ex4_1 = _ramda2.default.compose(_ramda2.default.map(_ramda2.
 
 // export var getResult = _.curry(S.either(_.identity, _.__));
 var getResult2 = exports.getResult2 = function getResult2(x) {
-    return x.isRight ? x.get().get() : x.value;
+    var j = x.isRight ? x.get().get() : x.value;
+    return j;
 };
 
 var emailBlast2 = function emailBlast2(list) {

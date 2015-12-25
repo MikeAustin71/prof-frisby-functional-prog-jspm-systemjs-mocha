@@ -104,7 +104,8 @@ export var ex4_1 = _.compose(_.map(_.compose(S.chain(emailBlast), addToMailingLi
 
 // export var getResult = _.curry(S.either(_.identity, _.__));
 export var getResult2 = function(x){
-    return  x.isRight ? x.get().get() : x.value;
+    var j =  x.isRight ? x.get().get() : x.value;
+    return j;
 };
 
 var emailBlast2 = function(list) {

@@ -151,7 +151,7 @@ IO2.prototype.map = function(f) {
 };
 
 IO2.prototype.get = function(){
-    return this.unsafePerformIO;
+    return this.unsafePerformIO();
 }
 
 IO2.prototype.join = function() {
