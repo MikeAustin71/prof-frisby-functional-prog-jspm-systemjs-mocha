@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.ex4_2 = exports.validateEmail2 = exports.getResult2 = exports.ex4_1 = exports.getResult = exports.ex3_1 = exports.ex2_1 = exports.pureLog = exports.getFile = exports.ex1_2 = exports.ex1_1 = exports.safeProp = exports.__hotReload = undefined;
+exports.ex4_1 = exports.getResult = exports.ex3_1 = exports.ex2_1 = exports.pureLog = exports.getFile = exports.ex1_2 = exports.ex1_1 = exports.safeProp = exports.__hotReload = undefined;
 
 var _ramda = require('ramda');
 
@@ -74,7 +74,6 @@ var getPost = function getPost(i) {
         }, 300);
     });
 };
-
 var getComments = function getComments(i) {
     return new _data.Task(function (rej, res) {
         setTimeout(function () {
@@ -100,11 +99,11 @@ var addToMailingList = (function (list) {
     };
 })([]);
 
-var emailBlast = function emailBlast(list) {
+function emailBlast(list) {
     return new S.IO(function () {
         return 'emailed: ' + list.join(',');
     });
-};
+}
 
 var validateEmail = function validateEmail(x) {
     return x.match(/\S+@\S+\.\S+/) ? new S.Right(x) : new S.Left('invalid email');
@@ -118,31 +117,29 @@ var getResult = exports.getResult = _ramda2.default.curry(S.either(_ramda2.defau
 //_.compose(S.chain(_.compose(emailBlast,addToMailingList),validateEmail));
 var ex4_1 = exports.ex4_1 = _ramda2.default.compose(_ramda2.default.map(_ramda2.default.compose(S.chain(emailBlast), addToMailingList)), validateEmail);
 
-// Exercise ex4_2 - an alternative to ex4_1
+// Exercise 4 Alternative ex4_2
+/*
+ export var getResult2 = _.curry(Either(_.identity, _.__));
 
-// export var getResult = _.curry(S.either(_.identity, _.__));
-var getResult2 = exports.getResult2 = function getResult2(x) {
-    return x.isRight ? x.get().get() : x.value;
-};
+ function emailBlast2(list) {
+ return new S.IO2(function(){
+ return 'emailed: ' + list.join(',');
+ });
+ }
 
-var emailBlast2 = function emailBlast2(list) {
-    return new S.IO2(function () {
-        return 'emailed: ' + list.join(',');
-    });
-};
+ var validateEmail2 = function(x){
+ return x.match(/\S+@\S+\.\S+/) ? (Either.Right(x)) : (new Either.Left('invalid email'));
+ };
 
-var validateEmail2 = exports.validateEmail2 = function validateEmail2(x) {
-    return x.match(/\S+@\S+\.\S+/) ? _data.Either.Right(x) : new _data.Either.Left('invalid email');
-};
+ var addToMailingList2 = (function(list){
+ return function(email) {
+ return new S.IO2(function(){
+ list.push(email);
+ return list;
+ });
+ }
+ })([]);
 
-var addToMailingList2 = (function (list) {
-    return function (email) {
-        return new S.IO2(function () {
-            list.push(email);
-            return list;
-        });
-    };
-})([]);
-
-var ex4_2 = exports.ex4_2 = _ramda2.default.compose(_ramda2.default.map(_ramda2.default.compose(S.chain(emailBlast2), addToMailingList2)), validateEmail2);
-//# sourceMappingURL=ExLib.js.map
+ export var ex4_2 = _.compose(_.map(_.compose(S.chain(emailBlast2), addToMailingList2)), validateEmail2);
+ */
+//# sourceMappingURL=ExLib2.js.map

@@ -7,8 +7,9 @@ export let __hotReload = true;
 
 import _ from 'ramda';
 
-import {Either,Right,Left,Maybe} from 'folktale/data';
+import {Either,Maybe} from 'folktale/data';
 import {monads} from 'folktale/control';
+import * as S from './support.js';
 
 //  safeProp :: Key -> {Key: a} -> Maybe a
 export var safeProp = _.curry(function(x, obj) {
@@ -37,3 +38,4 @@ export var chain = _.curry(function(f, m){
 export var v2FirstAddressStreet = _.compose(
     chain(safeProp('street')), chain(safeHead), safeProp('addresses')
 );
+

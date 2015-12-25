@@ -25,7 +25,7 @@ var __hotReload = exports.__hotReload = true;
 //
 // This defines the list of test files we want to load and run tests against.
 //
-var mochaTestScripts = ['./build/tests/Ex01_tests.js', './build/tests/Ex02_tests.js', './build/tests/Ex03_tests.js'];
+var mochaTestScripts = ['./build/tests/Ex00_tests.js', './build/tests/Ex01_tests.js', './build/tests/Ex02_tests.js', './build/tests/Ex03_tests.js', './build/tests/Ex04_tests.js'];
 
 //
 // If you have a global or two that get exposed from your

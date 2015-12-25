@@ -5,9 +5,10 @@
 export let  __hotReload = true;
 
 import * as Chai from 'chai';
-import {ex1_1, ex1_2} from './../xlib/ExLib.js';
+import * as X from './../xlib/ExLib.js';
 import {Maybe} from 'folktale/data';
 import {monads} from 'folktale/control';
+
 
 var title = "Exercise 1 - "
     + "Use safeProp and map/join or chain to safely get the street name when given "
@@ -33,7 +34,7 @@ describe("Ex01 Chapter 9 Exercises" + title, function(){
 
         var expected = Maybe.of('Walnut St');
 
-        var result = ex1_1(user);
+        var result = X.ex1_1(user);
 
         it("ex1_1(user) should return name = 'Walnut St' ", function(){
 
@@ -47,7 +48,7 @@ describe("Ex01 Chapter 9 Exercises" + title, function(){
 
         var expected = Maybe.of('Walnut St');
 
-        var result = ex1_1(user);
+        var result = X.ex1_2(user);
 
         it("ex1_2(user) should return name = 'Walnut St' ", function(){
 

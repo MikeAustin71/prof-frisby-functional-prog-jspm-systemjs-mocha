@@ -73,6 +73,11 @@ Exercises from Chapter 9 configured using jspm and systemjs.
     *  (9) npm install babel-plugin-transform-es2015-modules-amd
     * (10) npm install babel-plugin-transform-es2015-modules-systemjs
 
+Only need these three deployed by npm locally:
+    * (4) npm install babel-preset-react
+    * (5) npm install babel-preset-es2015
+    * (6) npm install babel-preset-stage-0
+
 * c. From project directory, run npm install jspm
 
 * d. From project directory, run jspm init

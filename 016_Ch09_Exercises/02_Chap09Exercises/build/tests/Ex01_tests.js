@@ -11,6 +11,8 @@ var Chai = _interopRequireWildcard(_chai);
 
 var _ExLib = require('./../xlib/ExLib.js');
 
+var X = _interopRequireWildcard(_ExLib);
+
 var _data = require('folktale/data');
 
 var _control = require('folktale/control');
@@ -42,7 +44,7 @@ describe("Ex01 Chapter 9 Exercises" + title, function () {
 
         var expected = _data.Maybe.of('Walnut St');
 
-        var result = (0, _ExLib.ex1_1)(user);
+        var result = X.ex1_1(user);
 
         it("ex1_1(user) should return name = 'Walnut St' ", function () {
 
@@ -54,7 +56,7 @@ describe("Ex01 Chapter 9 Exercises" + title, function () {
 
         var expected = _data.Maybe.of('Walnut St');
 
-        var result = (0, _ExLib.ex1_1)(user);
+        var result = X.ex1_2(user);
 
         it("ex1_2(user) should return name = 'Walnut St' ", function () {
 

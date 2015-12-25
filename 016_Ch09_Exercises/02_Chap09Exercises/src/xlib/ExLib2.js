@@ -18,6 +18,8 @@ export var safeProp = _.curry(function (x, o) { return Maybe.of(o[x]); });
 
 export var ex1_1 = _.compose(monads.join,_.map(safeProp('name')), monads.join, _.map(safeProp('street')), safeProp('address'));
 
+
+
 export var ex1_2 = _.compose(S.chain(safeProp('name')), S.chain(safeProp('street')), safeProp('address'));
 
 // Exercise 2
@@ -40,7 +42,6 @@ export var pureLog = function(x) {
 
 export var ex2_1 = _.compose(S.chain(_.compose(pureLog, _.last, S.split('/'))), getFile);
 
-
 // Exercise 3
 // ==========
 // Use getPost() then pass the post's id to getComments().
@@ -53,7 +54,6 @@ var getPost = function(i) {
         }, 300);
     });
 };
-
 var getComments = function(i) {
     return new Task(function (rej, res) {
         setTimeout(function () {
@@ -82,11 +82,11 @@ var addToMailingList = (function(list){
     }
 })([]);
 
-var emailBlast = function(list) {
+function emailBlast(list) {
     return new S.IO(function(){
         return 'emailed: ' + list.join(',');
     });
-};
+}
 
 var validateEmail = function(x){
     return x.match(/\S+@\S+\.\S+/) ? (new S.Right(x)) : (new S.Left('invalid email'));
@@ -100,31 +100,28 @@ export var getResult = _.curry(S.either(_.identity, _.__));
 //_.compose(S.chain(_.compose(emailBlast,addToMailingList),validateEmail));
 export var ex4_1 = _.compose(_.map(_.compose(S.chain(emailBlast), addToMailingList)), validateEmail);
 
-// Exercise ex4_2 - an alternative to ex4_1
+// Exercise 4 Alternative ex4_2
+/*
+ export var getResult2 = _.curry(Either(_.identity, _.__));
 
-// export var getResult = _.curry(S.either(_.identity, _.__));
-export var getResult2 = function(x){
-    return  x.isRight ? x.get().get() : x.value;
-};
+ function emailBlast2(list) {
+ return new S.IO2(function(){
+ return 'emailed: ' + list.join(',');
+ });
+ }
 
-var emailBlast2 = function(list) {
-    return new S.IO2(function(){
-        return 'emailed: ' + list.join(',');
-    });
-};
+ var validateEmail2 = function(x){
+ return x.match(/\S+@\S+\.\S+/) ? (Either.Right(x)) : (new Either.Left('invalid email'));
+ };
 
-export var validateEmail2 = function(x){
-    return x.match(/\S+@\S+\.\S+/) ? Either.Right(x) : (new Either.Left('invalid email'));
-};
+ var addToMailingList2 = (function(list){
+ return function(email) {
+ return new S.IO2(function(){
+ list.push(email);
+ return list;
+ });
+ }
+ })([]);
 
-var addToMailingList2 = (function(list){
-    return function(email) {
-        return new S.IO2(function(){
-            list.push(email);
-            return list;
-        });
-    }
-})([]);
-
-export var ex4_2 = _.compose(_.map(_.compose(S.chain(emailBlast2), addToMailingList2)), validateEmail2);
-
+ export var ex4_2 = _.compose(_.map(_.compose(S.chain(emailBlast2), addToMailingList2)), validateEmail2);
+ */
