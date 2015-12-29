@@ -3,7 +3,7 @@
  */
 
 export let __hotReload = true;
-import * as Chai from 'chai';
+import {assert} from 'chai/lib/chai.js';
 
 import {safeProp, safeHead, firstAddressStreet} from './../xlib/ExLib.js';
 import {Maybe} from 'folktale/data';
@@ -19,7 +19,7 @@ describe("Ex01 SafeProp Exercises", function(){
 
         it("safeProp('Addr1',Addr) should return '91210 Hwy 290 West' ", function(){
 
-            Chai.assert.deepEqual(expected.get(),result.get(),"Error: 'safeProp()' result is INVALID!");
+            assert.deepEqual(expected.get(),result.get(),"Error: 'safeProp()' result is INVALID!");
 
         });
 
@@ -38,7 +38,7 @@ describe("Ex01 SafeProp Exercises", function(){
 
         it("safeHead(txAddresses) should return '91210 Hwy 290 West' ", function(){
 
-            Chai.assert.deepEqual(expected,result,"Error: 'safeHead()' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'safeHead()' result is INVALID!");
 
         });
 
@@ -67,7 +67,7 @@ describe("Ex01 SafeProp Exercises", function(){
 
         it("safeHead(txAddresses) should return Maybe 3-levels deep -> '{name: 'Hwy 290 West', number: '555555'}' ", function(){
 
-            Chai.assert.deepEqual(expected,result,"Error: 'safeHead()' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'safeHead()' result is INVALID!");
 
         });
 

@@ -1,7 +1,7 @@
 {
-  "name": "01_Chap09Examples",
+  "name": "01_Chap10Examples",
   "version": "1.0.0",
-  "description": "Chapter 09 - Examples",
+  "description": "Chapter 10 - Examples",
   "main": "main.js",
   "scripts": {
     "build": "babel src --out-dir build --source-maps true"

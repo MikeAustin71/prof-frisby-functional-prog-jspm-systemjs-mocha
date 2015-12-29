@@ -3,7 +3,7 @@
  */
 
 export let __hotReload = true;
-import * as Chai from 'chai';
+import {assert} from 'chai/lib/chai.js';
 
 import {Maybe, Either} from 'folktale/data';
 
@@ -21,7 +21,7 @@ describe("Ex05 Test folktale 'Either'", function(){
             var expected = Either.Right('sleepy@grandpa.net');
             var result = validateEmail('sleepy@grandpa.net');
 
-            Chai.assert.deepEqual(expected,result,"Error: 'validateEmail()' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'validateEmail()' result is INVALID!");
 
         });
 
@@ -30,7 +30,7 @@ describe("Ex05 Test folktale 'Either'", function(){
             var expected = Either.Left('invalid email');
             var result = validateEmail('notanemail');
 
-            Chai.assert.deepEqual(expected,result,"Error: 'validateEmail()' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'validateEmail()' result is INVALID!");
 
         });
 
@@ -44,7 +44,7 @@ describe("Ex05 Test folktale 'Either'", function(){
             var e1 = validateEmail('sleepy@grandpa.net');
             var result = e1.get();
 
-            Chai.assert.deepEqual(expected,result,"Error: 'validateEmail()' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'validateEmail()' result is INVALID!");
 
         });
 
@@ -53,7 +53,7 @@ describe("Ex05 Test folktale 'Either'", function(){
             var expected = 'invalid email';
             var result = validateEmail('notanemail').merge();
 
-            Chai.assert.deepEqual(expected,result,"Error: 'validateEmail()' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'validateEmail()' result is INVALID!");
 
         });
 
@@ -68,7 +68,7 @@ describe("Ex05 Test folktale 'Either'", function(){
             var e1 = validateEmail('sleepy@grandpa.net');
             var result = e1.isRight;
 
-            Chai.assert.deepEqual(expected,result,"Error: 'isRight' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'isRight' result is INVALID!");
 
         });
 
@@ -78,7 +78,7 @@ describe("Ex05 Test folktale 'Either'", function(){
             var e1 = validateEmail('notanemail');
             var result = e1.isLeft;
 
-            Chai.assert.deepEqual(expected,result,"Error: 'isLeft' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'isLeft' result is INVALID!");
 
         });
 

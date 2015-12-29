@@ -5,15 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.__hotReload = undefined;
 
-var _chai = require('chai');
-
-var Chai = _interopRequireWildcard(_chai);
+var _chai = require('chai/lib/chai.js');
 
 var _ExLib = require('./../xlib/ExLib.js');
 
 var _data = require('folktale/data');
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 /**
  * Created by mike10 on 12/20/2015.
@@ -31,7 +27,7 @@ describe("Ex01 SafeProp Exercises", function () {
 
                 it("safeProp('Addr1',Addr) should return '91210 Hwy 290 West' ", function () {
 
-                        Chai.assert.deepEqual(expected.get(), result.get(), "Error: 'safeProp()' result is INVALID!");
+                        _chai.assert.deepEqual(expected.get(), result.get(), "Error: 'safeProp()' result is INVALID!");
                 });
         });
 
@@ -44,7 +40,7 @@ describe("Ex01 SafeProp Exercises", function () {
 
                 it("safeHead(txAddresses) should return '91210 Hwy 290 West' ", function () {
 
-                        Chai.assert.deepEqual(expected, result, "Error: 'safeHead()' result is INVALID!");
+                        _chai.assert.deepEqual(expected, result, "Error: 'safeHead()' result is INVALID!");
                 });
         });
 
@@ -61,7 +57,7 @@ describe("Ex01 SafeProp Exercises", function () {
 
                 it("safeHead(txAddresses) should return Maybe 3-levels deep -> '{name: 'Hwy 290 West', number: '555555'}' ", function () {
 
-                        Chai.assert.deepEqual(expected, result, "Error: 'safeHead()' result is INVALID!");
+                        _chai.assert.deepEqual(expected, result, "Error: 'safeHead()' result is INVALID!");
                 });
         });
 });

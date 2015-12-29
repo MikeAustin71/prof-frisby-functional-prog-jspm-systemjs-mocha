@@ -5,13 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.__hotReload = undefined;
 
-var _chai = require('chai');
-
-var Chai = _interopRequireWildcard(_chai);
+var _chai = require('chai/lib/chai.js');
 
 var _data = require('folktale/data');
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 /**
  * Created by mike10 on 12/23/2015.
@@ -33,7 +29,7 @@ describe("Ex05 Test folktale 'Either'", function () {
                                     var expected = _data.Either.Right('sleepy@grandpa.net');
                                     var result = validateEmail('sleepy@grandpa.net');
 
-                                    Chai.assert.deepEqual(expected, result, "Error: 'validateEmail()' result is INVALID!");
+                                    _chai.assert.deepEqual(expected, result, "Error: 'validateEmail()' result is INVALID!");
                         });
 
                         it("validateEmail('notanemail') should return Either.Left('invalid email') ", function () {
@@ -41,7 +37,7 @@ describe("Ex05 Test folktale 'Either'", function () {
                                     var expected = _data.Either.Left('invalid email');
                                     var result = validateEmail('notanemail');
 
-                                    Chai.assert.deepEqual(expected, result, "Error: 'validateEmail()' result is INVALID!");
+                                    _chai.assert.deepEqual(expected, result, "Error: 'validateEmail()' result is INVALID!");
                         });
             });
 
@@ -53,7 +49,7 @@ describe("Ex05 Test folktale 'Either'", function () {
                                     var e1 = validateEmail('sleepy@grandpa.net');
                                     var result = e1.get();
 
-                                    Chai.assert.deepEqual(expected, result, "Error: 'validateEmail()' result is INVALID!");
+                                    _chai.assert.deepEqual(expected, result, "Error: 'validateEmail()' result is INVALID!");
                         });
 
                         it("validateEmail('notanemail').merge() should return string 'invalid email' ", function () {
@@ -61,7 +57,7 @@ describe("Ex05 Test folktale 'Either'", function () {
                                     var expected = 'invalid email';
                                     var result = validateEmail('notanemail').merge();
 
-                                    Chai.assert.deepEqual(expected, result, "Error: 'validateEmail()' result is INVALID!");
+                                    _chai.assert.deepEqual(expected, result, "Error: 'validateEmail()' result is INVALID!");
                         });
             });
 
@@ -73,7 +69,7 @@ describe("Ex05 Test folktale 'Either'", function () {
                                     var e1 = validateEmail('sleepy@grandpa.net');
                                     var result = e1.isRight;
 
-                                    Chai.assert.deepEqual(expected, result, "Error: 'isRight' result is INVALID!");
+                                    _chai.assert.deepEqual(expected, result, "Error: 'isRight' result is INVALID!");
                         });
 
                         it("validateEmail('notanemail') isLeft should return 'true' ", function () {
@@ -82,7 +78,7 @@ describe("Ex05 Test folktale 'Either'", function () {
                                     var e1 = validateEmail('notanemail');
                                     var result = e1.isLeft;
 
-                                    Chai.assert.deepEqual(expected, result, "Error: 'isLeft' result is INVALID!");
+                                    _chai.assert.deepEqual(expected, result, "Error: 'isLeft' result is INVALID!");
                         });
             });
 });

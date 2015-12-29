@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.v2FirstAddressStreet = exports.chain = exports.mFirstAddressStreet = exports.firstAddressStreet = exports.safeHead = exports.safeProp = exports.__hotReload = undefined;
+exports.getNum = exports.v2FirstAddressStreet = exports.chain = exports.mFirstAddressStreet = exports.firstAddressStreet = exports.safeHead = exports.safeProp = exports.__hotReload = undefined;
 
 var _ramda = require('ramda');
 
@@ -47,4 +47,22 @@ var chain = exports.chain = _ramda2.default.curry(function (f, m) {
 
 // chain
 var v2FirstAddressStreet = exports.v2FirstAddressStreet = _ramda2.default.compose(chain(safeProp('street')), chain(safeHead), safeProp('addresses'));
+
+/*
+var getNum = function (i) {
+    return new Task(function(rej, res) {
+        setTimeout(function(){
+            res({num: i})
+        }, 300)
+    });
+};
+*/
+
+var getNum = exports.getNum = function getNum(i) {
+    return new _data.Task(function (rej, res) {
+        setTimeout(function () {
+            res({ num: i });
+        }, 300);
+    });
+};
 //# sourceMappingURL=Exlib.js.map

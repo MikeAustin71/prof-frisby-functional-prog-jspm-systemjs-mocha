@@ -3,7 +3,7 @@
  */
 
 export let __hotReload = true;
-import * as Chai from 'chai';
+import {assert} from 'chai/lib/chai.js';
 
 import {mFirstAddressStreet} from './../xlib/ExLib.js';
 import {Maybe} from 'folktale/data';
@@ -32,7 +32,7 @@ describe("Ex03 Refactor firstStreetAddress as monad", function(){
 
         it("mFirstAddressStreet(txAddr) should return Maybe 1-level deep -> '{name: 'Hwy 290 West', number: '555555'}' ", function(){
 
-            Chai.assert.deepEqual(expected,result,"Error: 'mFirstAddressStreet()' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'mFirstAddressStreet()' result is INVALID!");
 
         });
 

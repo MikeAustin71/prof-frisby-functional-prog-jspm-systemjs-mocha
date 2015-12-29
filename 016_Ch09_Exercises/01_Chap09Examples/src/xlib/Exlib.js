@@ -7,7 +7,7 @@ export let __hotReload = true;
 
 import _ from 'ramda';
 
-import {Either,Maybe} from 'folktale/data';
+import {Either,Task,Maybe} from 'folktale/data';
 import {monads} from 'folktale/control';
 import * as S from './support.js';
 
@@ -39,3 +39,20 @@ export var v2FirstAddressStreet = _.compose(
     chain(safeProp('street')), chain(safeHead), safeProp('addresses')
 );
 
+/*
+var getNum = function (i) {
+    return new Task(function(rej, res) {
+        setTimeout(function(){
+            res({num: i})
+        }, 300)
+    });
+};
+*/
+
+export var getNum = function(i){
+    return new Task(function(rej, res) {
+        setTimeout(function(){
+            res({num: i})
+        }, 300)
+    })
+};

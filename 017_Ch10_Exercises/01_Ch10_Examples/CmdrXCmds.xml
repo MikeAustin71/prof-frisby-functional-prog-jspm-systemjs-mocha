@@ -9,6 +9,22 @@
 		<DefaultCommandOutputLogFilePathName>./cmdrx/install.log</DefaultCommandOutputLogFilePathName>
 	</CommandFileHeader>
 	<ExectuteCommand>
+		<CommandDisplayName>Run npm install babel-cli</CommandDisplayName>
+		<ConsoleCommandType>Console</ConsoleCommandType>
+		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
+		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
+		<CommandOutputLogFilePathBaseName></CommandOutputLogFilePathBaseName>
+		<!--Time out expressed in decimal fractions of a minute. Example: 10.0 minutes -->
+		<CommandTimeOutInMinutes>5.0</CommandTimeOutInMinutes>
+		<DefaultConsoleCommandExecutor>cmd.exe</DefaultConsoleCommandExecutor>
+		<ConsoleCommandExeArguments>/c</ConsoleCommandExeArguments>
+		<ExecuteInDir></ExecuteInDir>
+		<ExecutableTarget>npm</ExecutableTarget>
+		<CommandToExecute>install</CommandToExecute>
+		<CommandModifier>babel-cli</CommandModifier>
+		<CommandArguments>--save</CommandArguments>
+	</ExectuteCommand>
+	<ExectuteCommand>
 		<CommandDisplayName>Run npm install babel-core</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>

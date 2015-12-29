@@ -17,10 +17,8 @@ import mocha from 'mocha';
 var mochaTestScripts = [
     './build/tests/Ex01_tests.js',
     './build/tests/Ex02_tests.js',
-    './build/tests/Ex03_tests.js',
-    './build/tests/Ex04_tests.js',
-    './build/tests/Ex05_tests.js',
-    './build/tests/Ex06_tests.js'
+    './build/tests/Ex03_tests.js'
+
 ];
 
 //

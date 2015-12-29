@@ -5,8 +5,8 @@
 This is the setup used to build and run tests for Professor Frisby's Functional programming examples.
 The tests are executed in the browser using index.html.
 
-## Chapter 9 Exercises
-Exercises from Chapter 9 configured using jspm and systemjs.
+## Chapter 10 Examples and Experimentation
+Chapmter 10 Examples configured using jspm and systemjs.
 
 ## Thanks to Dr. Boolean for:
 [Professor Frisby's Mostly Adequate Guide To Functional Programming ](https://drboolean.gitbooks.io/mostly-adequate-guide/?__s=ehycp62un87de5g78chs)
@@ -19,7 +19,7 @@ Exercises from Chapter 9 configured using jspm and systemjs.
 ## Setup Package Versions
 
 * babel-cli version 6.3.17  (globally installed)
-* babel-core version 6.3.21 (globally installed by babel-cli)
+* babel-core version 6.3.26 (globally installed by babel-cli)
 * babel-runtime version 6.3.13 (globally installed manually)
 * jspm version 0.16.19
 * accounting version 0.4.1

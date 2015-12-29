@@ -4,7 +4,7 @@
 
 
 export let __hotReload = true;
-import * as Chai from 'chai';
+import {assert} from 'chai/lib/chai.js';
 
 
 import {Maybe} from 'folktale/data';
@@ -21,7 +21,7 @@ describe("Ex02 Join Exercises", function(){
 
         it("monads.join(mmo) should return 'numchucks' ", function(){
 
-            Chai.assert.deepEqual(expected.get(),result.get(),"Error: 'monads.join()' result is INVALID!");
+            assert.deepEqual(expected.get(),result.get(),"Error: 'monads.join()' result is INVALID!");
 
         });
 

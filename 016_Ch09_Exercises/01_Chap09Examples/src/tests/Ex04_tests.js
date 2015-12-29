@@ -3,7 +3,7 @@
  */
 
 export let __hotReload = true;
-import * as Chai from 'chai';
+import {assert} from 'chai/lib/chai.js';
 
 import {v2FirstAddressStreet} from './../xlib/ExLib.js';
 import {Maybe} from 'folktale/data';
@@ -32,7 +32,7 @@ describe("Ex04 Refactor firstStreetAddress with 'chain'", function(){
 
         it("v2FirstAddressStreet(txAddr) should return Maybe 1-level deep -> '{name: 'Hwy 290 West', number: '555555'}' ", function(){
 
-            Chai.assert.deepEqual(expected,result,"Error: 'v2FirstAddressStreet()' result is INVALID!");
+            assert.deepEqual(expected,result,"Error: 'v2FirstAddressStreet()' result is INVALID!");
 
         });
 
