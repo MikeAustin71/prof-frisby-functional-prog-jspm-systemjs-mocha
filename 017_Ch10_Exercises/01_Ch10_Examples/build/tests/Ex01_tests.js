@@ -5,9 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.__hotReload = undefined;
 
-var _chai = require('chai');
-
-var Chai = _interopRequireWildcard(_chai);
+var _chai = require('chai/lib/chai.js');
 
 var _ExLib = require('./../xlib/ExLib.js');
 
@@ -43,7 +41,7 @@ describe("Ex01 Chapter 10 Examples" + title, function () {
 
                 it("ex1_1 should return Maybe container with value = 'Walnut St' ", function () {
 
-                        Chai.assert.deepEqual(actual.get(), expected.get(), "Error: 'ex1_1()' result is INVALID!");
+                        _chai.assert.deepEqual(actual.get(), expected.get(), "Error: 'ex1_1()' result is INVALID!");
                 });
         });
 });

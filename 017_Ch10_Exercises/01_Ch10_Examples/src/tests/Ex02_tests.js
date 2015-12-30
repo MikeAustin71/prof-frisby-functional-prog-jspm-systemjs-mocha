@@ -4,7 +4,7 @@
 
 export let  __hotReload = true;
 
-import * as Chai from 'chai';
+import {assert} from 'chai/lib/chai.js';
 import * as X from './../xlib/ExLib.js';
 import _ from 'ramda';
 import {Either,Maybe,Task} from 'folktale/data';
@@ -23,7 +23,7 @@ describe("Ex02 Chapter 10 Examples" + title, function(){
 
         it("ex2_1 should return Maybe container with value = '6' ", function(){
 
-            Chai.assert.deepEqual(actual.value, expected,"Error: 'ex2_1()' result is INVALID!");
+            assert.deepEqual(actual.value, expected,"Error: 'ex2_1()' result is INVALID!");
 
         });
 
@@ -38,7 +38,7 @@ describe("Ex02 Chapter 10 Examples" + title, function(){
 
         it("ex2_2 should return the addition of two containers formatted as third container with value = '7' ", function(){
 
-            Chai.assert.deepEqual(actual.get(), expected.get(),"Error: 'ex2_2()' result is INVALID!");
+            assert.deepEqual(actual.get(), expected.get(),"Error: 'ex2_2()' result is INVALID!");
 
         });
 

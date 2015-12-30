@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.liftA3 = exports.liftA2 = exports.checkName = exports.checkEmail = exports.identity = exports.ex2_2 = exports.ex2_1 = exports.add1 = exports.add = exports.ex1_1 = exports.__hotReload = undefined;
+exports.liftA3 = exports.liftA2 = exports.checkName = exports.checkEmail = exports.identity = exports.ex2_2 = exports.ex2_1 = exports.add3 = exports.add2 = exports.add = exports.ex1_1 = exports.__hotReload = undefined;
 
 var _ramda = require('ramda');
 
@@ -30,9 +30,13 @@ var add = exports.add = function add(a, b) {
     return a + b;
 };
 
-var add1 = exports.add1 = function add1(x) {
-    return _data.Maybe.of(x.value + 1);
-};
+var add2 = exports.add2 = _ramda2.default.curry(function (a, b) {
+    return a + b;
+});
+
+var add3 = exports.add3 = _ramda2.default.curry(function (a, b, c) {
+    return a + b + c;
+});
 
 // Inputs two values and computes result formatted as a container.
 var ex2_1 = exports.ex2_1 = function ex2_1(x, y) {

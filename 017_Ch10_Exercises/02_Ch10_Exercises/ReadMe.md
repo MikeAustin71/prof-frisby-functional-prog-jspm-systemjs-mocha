@@ -5,11 +5,11 @@
 This is the setup used to build and run tests for Professor Frisby's Functional programming examples.
 The tests are executed in the browser using index.html.
 
-## Chapter 10 Examples and Experimentation
-Chapter 10 Examples configured using jspm and systemjs.
+## Chapter 10 Exercises
+Chapter 10 Exercises configured using jspm and systemjs.
 
 ## Thanks to Dr. Boolean for:
-[Professor Frisby's Mostly Adequate Guide To Functional Programming ](https://drboolean.gitbooks.io/mostly-adequate-guide/?__s=ehycp62un87de5g78chs)
+[Professor Frisby's Mostly Adequate Guide To Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/?__s=ehycp62un87de5g78chs)
 [Professor Firsby's Videos](https://www.youtube.com/watch?v=h_tkIpwbsxY&feature=youtu.be&t=13m11s&__s=ehycp62un87de5g78chs)
 [Professor Frisby's Ebook Source Code](https://github.com/MostlyAdequate/mostly-adequate-guide)
 

@@ -19,9 +19,14 @@ export var add = function(a, b){
     return a + b;
 };
 
-export var add1 = function(x){
-  return  Maybe.of(x.value + 1);
-};
+
+export var add2 = _.curry(function(a, b){
+   return a + b;
+});
+
+export var add3 = _.curry(function(a,b,c){
+    return a + b + c;
+});
 
 // Inputs two values and computes result formatted as a container.
 export var ex2_1 = function(x, y) {
