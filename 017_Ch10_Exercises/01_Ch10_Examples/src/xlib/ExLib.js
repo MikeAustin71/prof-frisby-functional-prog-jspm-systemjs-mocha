@@ -38,6 +38,8 @@ export var ex2_2 = function(x, y) {
     return Maybe.of(_.add).ap(x).ap(y);
 };
 
+
+
 export var identity = _.curry(function(x){
     return x;
 });
@@ -57,4 +59,3 @@ export var liftA2 = _.curry(function(f, functor1, functor2) {
 export var liftA3 = _.curry(function(f, functor1, functor2, functor3) {
     return functor1.map(f).ap(functor2).ap(functor3);
 });
-

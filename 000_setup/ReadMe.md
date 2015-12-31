@@ -1,15 +1,14 @@
 
-# Professor Frisby Examples With Jspm and SystemJs
+# Professor Frisby's Functional Programming Exercises With Jspm, SystemJs, Mocha and Chai
 
 ## Overview
 This is the setup used to build and run tests for Professor Frisby's Functional programming examples.
 The tests are executed in the browser using index.html.
 
-## Specific Project Description
-A specific project description goes here.
+## Apply Chapter Desription Here
 
-## Thanks to Dr. Boolean for:
-[Professor Frisby's Mostly Adequate Guide To Functional Programming ](https://drboolean.gitbooks.io/mostly-adequate-guide/?__s=ehycp62un87de5g78chs)
+## Thanks to Dr. Boolean (aka Brian Lonsdorf) for:
+[Professor Frisby's Mostly Adequate Guide To Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/?__s=ehycp62un87de5g78chs)
 [Professor Firsby's Videos](https://www.youtube.com/watch?v=h_tkIpwbsxY&feature=youtu.be&t=13m11s&__s=ehycp62un87de5g78chs)
 [Professor Frisby's Ebook Source Code](https://github.com/MostlyAdequate/mostly-adequate-guide)
 
@@ -19,13 +18,15 @@ A specific project description goes here.
 ## Setup Package Versions
 
 * babel-cli version 6.3.17  (globally installed)
-* babel-core version 6.3.17 (globally installed by babel-cli)
+* babel-core version 6.3.26 (globally installed by babel-cli)
 * babel-runtime version 6.3.13 (globally installed manually)
-* jspm version 0.16.18
+* jspm version 0.16.19
 * accounting version 0.4.1
 * ramda version 0.18.0
+* folktale version 1.0.0
 * mocha version 2.3.4
 * chai version 3.4.1
+* jquery version 2.1.4
 
 
 ## Quick Setup/Install Procedures
@@ -59,17 +60,12 @@ A specific project description goes here.
     * (7) npm install -g babel-plugin-transform-es2015-modules-amd
     * (8) npm install -g babel-plugin-transform-es2015-modules-systemjs
 
+
 * b. From project directory, run npm local installation. (For items 'b', 'c', 'd' and 'e' you can run CmdrX.exe on windows platforms.)
-    *  (1) npm install babel-cli
-    *  (2) npm install babel-core
-    *  (3) npm install babel-runtime
-    *  (4) npm install babel-preset-react
-    *  (5) npm install babel-preset-es2015
-    *  (6) npm install babel-preset-stage-0
-    *  (7) npm install babel-plugin-transform-react-jsx
-    *  (8) npm install babel-plugin-transform-es2015-modules-commonjs
-    *  (9) npm install babel-plugin-transform-es2015-modules-amd
-    * (10) npm install babel-plugin-transform-es2015-modules-systemjs
+    * (1) npm install babel-preset-react
+    * (2) npm install babel-preset-es2015
+    * (3) npm install babel-preset-stage-0
+
 
 * c. From project directory, run npm install jspm
 

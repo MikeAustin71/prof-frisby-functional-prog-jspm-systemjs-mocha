@@ -9,6 +9,22 @@
 		<DefaultCommandOutputLogFilePathName>./cmdrx/install.log</DefaultCommandOutputLogFilePathName>
 	</CommandFileHeader>
 	<ExectuteCommand>
+		<CommandDisplayName>Run npm install babel-cli</CommandDisplayName>
+		<ConsoleCommandType>Console</ConsoleCommandType>
+		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
+		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
+		<CommandOutputLogFilePathBaseName></CommandOutputLogFilePathBaseName>
+		<!--Time out expressed in decimal fractions of a minute. Example: 10.0 minutes -->
+		<CommandTimeOutInMinutes>5.0</CommandTimeOutInMinutes>
+		<DefaultConsoleCommandExecutor>cmd.exe</DefaultConsoleCommandExecutor>
+		<ConsoleCommandExeArguments>/c</ConsoleCommandExeArguments>
+		<ExecuteInDir></ExecuteInDir>
+		<ExecutableTarget>npm</ExecutableTarget>
+		<CommandToExecute>install</CommandToExecute>
+		<CommandModifier>babel-cli</CommandModifier>
+		<CommandArguments>--save</CommandArguments>
+	</ExectuteCommand>
+	<ExectuteCommand>
 		<CommandDisplayName>Run npm install babel-core</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
@@ -185,7 +201,7 @@
 		<CommandArguments>-y</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install registries.npm.timeouts.lookup 120</CommandDisplayName>
+		<CommandDisplayName>jspm install registries.npm.timeouts.lookup 120</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -201,7 +217,7 @@
 		<CommandArguments>registries.npm.timeouts.lookup 120</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install Babel npm:babel-core</CommandDisplayName>
+		<CommandDisplayName>jspm install Babel npm:babel-core</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -217,7 +233,7 @@
 		<CommandArguments>npm:babel-core</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install Babel npm:babel-runtime</CommandDisplayName>
+		<CommandDisplayName>jspm install Babel npm:babel-runtime</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -233,7 +249,7 @@
 		<CommandArguments>npm:babel-runtime</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install Babel preset react</CommandDisplayName>
+		<CommandDisplayName>jspm install Babel preset react</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -249,7 +265,7 @@
 		<CommandArguments>npm:babel-preset-react</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install Babel preset es2015</CommandDisplayName>
+		<CommandDisplayName>jspm install Babel preset es2015</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -265,7 +281,7 @@
 		<CommandArguments>npm:babel-preset-es2015</CommandArguments>
 	</ExectuteCommand>
     <ExectuteCommand>
-        <CommandDisplayName>Install babel-preset-stage-0</CommandDisplayName>
+        <CommandDisplayName>jspm install babel-preset-stage-0</CommandDisplayName>
         <ConsoleCommandType>Console</ConsoleCommandType>
         <KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
         <KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -281,7 +297,7 @@
         <CommandArguments>npm:babel-preset-stage-0</CommandArguments>
     </ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install babel-plugin-transform-es2015-modules-commonjs</CommandDisplayName>
+		<CommandDisplayName>jspm install babel-plugin-transform-es2015-modules-commonjs</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -297,7 +313,7 @@
 		<CommandArguments>npm:babel-plugin-transform-es2015-modules-commonjs</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install babel-plugin-transform-es2015-modules-amd</CommandDisplayName>
+		<CommandDisplayName>jspm install babel-plugin-transform-es2015-modules-amd</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -313,7 +329,7 @@
 		<CommandArguments>npm:babel-plugin-transform-es2015-modules-amd</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install babel-plugin-transform-es2015-modules-systemjs</CommandDisplayName>
+		<CommandDisplayName>jspm install babel-plugin-transform-es2015-modules-systemjs</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -329,7 +345,7 @@
 		<CommandArguments>npm:babel-plugin-transform-es2015-modules-systemjs</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install babel-plugin-transform-react-jsx</CommandDisplayName>
+		<CommandDisplayName>jspm install babel-plugin-transform-react-jsx</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -345,7 +361,7 @@
 		<CommandArguments>npm:babel-plugin-transform-react-jsx</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install css=github:systemjs/plugin-css</CommandDisplayName>
+		<CommandDisplayName>jspm install css=github:systemjs/plugin-css</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -361,7 +377,7 @@
 		<CommandArguments>css=github:systemjs/plugin-css</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install npm:accounting</CommandDisplayName>
+		<CommandDisplayName>jspm install npm:accounting</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -377,7 +393,7 @@
 		<CommandArguments>npm:accounting</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install npm:ramda</CommandDisplayName>
+		<CommandDisplayName>jspm install npm:ramda</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -393,7 +409,7 @@
 		<CommandArguments>npm:ramda</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install npm:folktale</CommandDisplayName>
+		<CommandDisplayName>jspm install npm:folktale</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -409,7 +425,23 @@
 		<CommandArguments>npm:folktale</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install npm:mocha</CommandDisplayName>
+		<CommandDisplayName>jspm install npm:fantasy-land</CommandDisplayName>
+		<ConsoleCommandType>Console</ConsoleCommandType>
+		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
+		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
+		<CommandOutputLogFilePathBaseName></CommandOutputLogFilePathBaseName>
+		<!--Time out expressed in decimal fractions of a minute. Example: 10.0 minutes -->
+		<CommandTimeOutInMinutes>5.0</CommandTimeOutInMinutes>
+		<DefaultConsoleCommandExecutor>cmd.exe</DefaultConsoleCommandExecutor>
+		<ConsoleCommandExeArguments>/c</ConsoleCommandExeArguments>
+		<ExecuteInDir></ExecuteInDir>
+		<ExecutableTarget>jspm</ExecutableTarget>
+		<CommandToExecute>install</CommandToExecute>
+		<CommandModifier></CommandModifier>
+		<CommandArguments>npm:fantasy-land</CommandArguments>
+	</ExectuteCommand>
+	<ExectuteCommand>
+		<CommandDisplayName>jspm install npm:mocha</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -425,7 +457,7 @@
 		<CommandArguments>npm:mocha</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install npm:chai</CommandDisplayName>
+		<CommandDisplayName>jspm install npm:chai</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>
@@ -441,7 +473,7 @@
 		<CommandArguments>npm:chai</CommandArguments>
 	</ExectuteCommand>
 	<ExectuteCommand>
-		<CommandDisplayName>Install jquery</CommandDisplayName>
+		<CommandDisplayName>jspm install jquery</CommandDisplayName>
 		<ConsoleCommandType>Console</ConsoleCommandType>
 		<KillJobsRunOnExitCodeGreaterThan></KillJobsRunOnExitCodeGreaterThan>
 		<KillJobsRunOnExitCodeLessThan></KillJobsRunOnExitCodeLessThan>

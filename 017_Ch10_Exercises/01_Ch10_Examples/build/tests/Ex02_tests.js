@@ -33,7 +33,7 @@ var title = "Maybe Test 2 - " + "Use folktale's Maybe to process container value
 
 describe("Ex02 Chapter 10 Examples" + title, function () {
 
-        describe("Ex02-1 - This tests folktale 'Maybe.app' See ExLib.js ", function () {
+        describe("Ex02-1 - This tests folktale 'Maybe.ap' See ExLib.js ", function () {
 
                 var actual = X.ex2_1(4, 2);
 
@@ -45,7 +45,7 @@ describe("Ex02 Chapter 10 Examples" + title, function () {
                 });
         });
 
-        describe("Ex02-2 - Uses Maybe.app to input and add values from two containers. The result is computed as third container. See ExLib.js ", function () {
+        describe("Ex02-2 - Uses Maybe.ap to input and add values from two containers. The result is computed as third container. See ExLib.js ", function () {
 
                 var expected = _data.Maybe.of(7);
                 var m1 = _data.Maybe.of(8);
@@ -55,6 +55,21 @@ describe("Ex02 Chapter 10 Examples" + title, function () {
                 it("ex2_2 should return the addition of two containers formatted as third container with value = '7' ", function () {
 
                         _chai.assert.deepEqual(actual.get(), expected.get(), "Error: 'ex2_2()' result is INVALID!");
+                });
+        });
+
+        describe("Ex02-3 - Add two values.  Call addition with null value: ex2_3(4,null).", function () {
+
+                var ex2_3 = function ex2_3(x, y) {
+                        return _data.Maybe.of(_ramda2.default.add).ap(_data.Maybe.of(x)).ap(_data.Maybe.of(y));
+                };
+
+                var expected = 4;
+                var actual = ex2_3(4, null);
+
+                it("ex2_3  ex2_3(4, null) should return value = 4 ", function () {
+
+                        _chai.assert.deepEqual(actual.get(), expected, "Error: ex2_3 result is INVALID!");
                 });
         });
 });
